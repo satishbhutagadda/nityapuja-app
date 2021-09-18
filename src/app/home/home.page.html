@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon name="menu"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>Nitya Puja</ion-title>
+    <!-- <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item id="grid-card-menu" [routerLink]="['/grid-card']"
+        >Grid Card</ion-item
+      >
+      <ion-item id="multiple-choice-menu" [routerLink]="['/multiple-choice']"
+        >Multiple Choice</ion-item
+      >
+      <ion-item id="form-menu" [routerLink]="['/form']">Form</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="main"></ion-router-outlet>
+
+<ion-content class="ion-padding">
+  <h2>Welcome!</h2>
+  
+  <div class="mb-3">
+    <ion-item slot="end">
+       <ion-label>Choose Language</ion-label>
+       <ion-select [(ngModel)]="languageSelected" (ionChange)='setLanguage()'>
+         <ion-select-option value="telugu">Telugu</ion-select-option>
+         <ion-select-option value="tamil">Tamil</ion-select-option>
+         <ion-select-option value="kannada">Kannada</ion-select-option>
+       </ion-select>
+     </ion-item>
+  </div>
+
+  <ion-list>
+    <ion-item button [routerLink]="['/grid-card']">
+      <ion-icon slot="start" name="logo-angular" style="color: #E63135;"></ion-icon>
+      <ion-label>
+        <h2>{{pageTitle}}</h2>
+      </ion-label>
+    </ion-item>
+    <ion-item button [routerLink]="['/form']">
+      <ion-icon slot="start" name="logo-angular" style="color: #E63135;"></ion-icon>
+      <ion-label>
+        <h2>Special Puja</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

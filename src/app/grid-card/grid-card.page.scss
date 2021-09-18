@@ -1,0 +1,39 @@
+.grid-card {
+  background-color: #f7f7f8;
+  border-radius: 1em;
+
+  ion-card-header {
+    padding: 8px;
+  }
+
+  ion-card-content {
+    padding-bottom: 8px;
+    padding-right: 8px;
+
+    ion-button {
+      text-transform: unset;
+    }
+  }
+  .assess-title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  ion-thumbnail {
+    width: 48px;
+    height: 48px;
+    margin-left: 8px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--ion-color-primary-contrast);
+    border-radius: 50%;
+    border: 2px solid #eee;
+
+    ion-img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
